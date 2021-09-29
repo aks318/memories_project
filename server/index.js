@@ -8,11 +8,13 @@ import {mongoURI} from './config/keys.js'
 
 const app = express()
 
-app.use('/posts' , postRoutes)
 
 app.use(bodyParser.json({ limit : "30mb" , extented : true}))
 app.use(bodyParser.urlencoded({ limit : "30mb" , extented : true}))
 app.use(cors())
+
+app.use('/posts' , postRoutes)
+
 
 const CONNECTION_URL = mongoURI
 const PORT = process.env.PORT || 5000
