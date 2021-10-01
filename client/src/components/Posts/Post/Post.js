@@ -34,7 +34,7 @@ const dispatch = useDispatch()
             <CardActions className = {classes.cardActions} >
                 <Button size = "small" color = "primary" onClick={() =>dispatch(likePost(post._id))}>
                     <ThumbUpAltIcon fontSize = "small" />
-                    Like
+                    Like {' '}
                     {post.likeCount}
                 </Button>
                 <Button size = "small" color = "primary" onClick={() => dispatch(deletePost(post._id))}>

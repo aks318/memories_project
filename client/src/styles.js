@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export default makeStyles(() => ({
+export default makeStyles((theme) => ({
   appBar: {
     borderRadius: 15,
     margin: '30px 0',
@@ -15,4 +15,11 @@ export default makeStyles(() => ({
   image: {
     marginLeft: '15px',
   },
+
+  [theme.breakpoints.down('sm')] : {   //similar to media query , if screen size is small then have this class
+    mainContainer : {
+      flexDirection : 'column-reverse'
+    }
+  }
+  
 }));
